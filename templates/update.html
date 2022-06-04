@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container  mt-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h2>【Update】</h2>
+      <form action="" method="POST">{% csrf_token %}
+        <div>
+          <p>
+            Title<br>
+            {{ form.title }}
+          </p>
+        </div>
+        <div>
+          <p>
+            Memo<br>
+            {{ form.memo }}
+          </p>
+        </div>
+        <div>
+          <p>
+            Priority<br>
+            {{ form.priority }}
+          </p>
+        </div>
+        <div>
+          <p>
+            Duedate<br>
+            {{ form.duedate }}
+          </p>
+        </div>
+        <input type="submit" value="update">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
